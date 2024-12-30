@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Navlink from './Navlink'
 import {
   Dialog,
   DialogPanel,
@@ -32,6 +33,8 @@ const callsToAction = [
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const middleMenuList = [{name: "Dashboard"}, {name: "Inventory"}, {name: "User"}, {name: "Customer"}, {name: "Product"}, {name: "Storage"}]
+
   return (
     <header className="bg-white">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
@@ -57,15 +60,10 @@ export default function Example() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
 
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            Dashboard
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            Marketplace
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            Company
-          </a>
+         { middleMenuList.map((item) => ( 
+          <Navlink key={item.name}>{item.name}</Navlink>
+          )) }
+          
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-sm/6 font-semibold text-gray-900">
