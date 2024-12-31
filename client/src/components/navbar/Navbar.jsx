@@ -6,6 +6,8 @@ import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
+import frostflowLogo from "../../assets/images/frostflow-logo.svg";
+
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -17,7 +19,6 @@ export default function Example() {
     { name: "Product" },
     { name: "Storage" },
   ];
-
   return (
     <header className="bg-white">
       <nav
@@ -26,12 +27,12 @@ export default function Example() {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">FrostFlow</span>
-            <img
-              alt=""
-              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
-            />
+            <div className="flex flex-col static justify-center">
+              <img alt="FrostFlowLogo" src={frostflowLogo} className="h-8 w-auto absolute top-0" />
+              <span className="text-sm/6 font-semibold text-gray-900">
+                FrostFlow
+              </span>
+            </div>
           </a>
         </div>
         <div className="flex lg:hidden">
