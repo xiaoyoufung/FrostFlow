@@ -1,12 +1,10 @@
-"use client";
-
 import { useState } from "react";
 import Navlink from "./Navlink";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
-import frostflowLogo from "../../assets/images/frostflow-logo.svg";
+import Navlogo from "./Navlogo";
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,20 +18,13 @@ export default function Example() {
     { name: "Storage" },
   ];
   return (
-    <header className="bg-white">
+    <header className="bg-white ring-1 ring-gray-900/10">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <div className="flex flex-col static justify-center">
-              <img alt="FrostFlowLogo" src={frostflowLogo} className="h-8 w-auto absolute top-0" />
-              <span className="text-sm/6 font-semibold text-gray-900">
-                FrostFlow
-              </span>
-            </div>
-          </a>
+        <Navlogo />
         </div>
         <div className="flex lg:hidden">
           <button
@@ -64,14 +55,7 @@ export default function Example() {
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                alt=""
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
-              />
-            </a>
+            <Navlogo />
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
