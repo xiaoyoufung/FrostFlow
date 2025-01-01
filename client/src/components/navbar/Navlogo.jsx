@@ -7,7 +7,7 @@ const Navlogo = () => {
         <img
           alt="FrostFlowLogo"
           src={frostflowLogo}
-          className="h-8 w-auto absolute top-0"
+          className="h-8 w-auto absolute lg:top-1 -top-2"
         />
         <span className="text-sm/6 font-semibold text-gray-900">FrostFlow</span>
       </div>

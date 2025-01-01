@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { act, useState } from "react";
 import Navlink from "./Navlink";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import NavbarLogin from "./NavbarLogin";
 
 import Navlogo from "./Navlogo";
@@ -11,19 +10,26 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("Dashboard");
 
-  const middleMenuList = [
-    { name: "Dashboard" },
-    { name: "Inventory" },
-    { name: "User" },
-    { name: "Customer" },
-    { name: "Product" },
-    { name: "Storage" },
+  const navigation = [
+    { name: "Dashboard", href: "#",  active: false },
+    { name: "Inventory", href: "#",  active: false},
+    { name: "User", href: "#",  active: false },
+    { name: "Customer", href: "#",  active: false },
+    { name: "Product", href: "#",  active: false },
+    { name: "Storage", href: "#",  active: false },
   ];
+
+  const userNavigation = [
+    { name: "Profile", href: "#" },
+    { name: "Settings", href: "#" },
+    { name: "Sign out", href: "#" },
+  ]
+
   return (
     <header className="bg-white ring-1 ring-gray-900/10">
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 relative"
+        className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8 relative"
       >
         <div className="flex lg:flex-1">
           <Navlogo />
@@ -39,7 +45,7 @@ export default function Example() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          {middleMenuList.map((menu) => (
+          {navigation.map((menu) => (
             <Navlink 
               key={menu.name} 
               active={activeLink === menu.name}
@@ -73,7 +79,7 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {middleMenuList.map((menu) => (
+                {navigation.map((menu) => (
                   <a
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
