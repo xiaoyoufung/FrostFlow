@@ -3,6 +3,7 @@ import Navlink from "./Navlink";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import NavbarLogin from "./NavbarLogin";
 
 import Navlogo from "./Navlogo";
 
@@ -48,11 +49,8 @@ export default function Example() {
             </Navlink>
           ))}
         </PopoverGroup>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            Log in
-          </a>
-        </div>
+        {/* Right login section */}
+        <NavbarLogin />
       </nav>
       <Dialog
         open={mobileMenuOpen}
