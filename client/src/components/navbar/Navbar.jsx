@@ -8,6 +8,7 @@ import Navlogo from "./Navlogo";
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("Dashboard");
 
   const middleMenuList = [
     { name: "Dashboard" },
@@ -21,10 +22,10 @@ export default function Example() {
     <header className="bg-white ring-1 ring-gray-900/10">
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 relative"
       >
         <div className="flex lg:flex-1">
-        <Navlogo />
+          <Navlogo />
         </div>
         <div className="flex lg:hidden">
           <button
@@ -38,12 +39,18 @@ export default function Example() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           {middleMenuList.map((menu) => (
-            <Navlink key={menu.name}>{menu.name}</Navlink>
+            <Navlink 
+              key={menu.name} 
+              active={activeLink === menu.name}
+              onClick={() => setActiveLink(menu.name)}
+              >
+              {menu.name}
+            </Navlink>
           ))}
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
+            Log in
           </a>
         </div>
       </nav>
