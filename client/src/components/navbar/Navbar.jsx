@@ -1,4 +1,4 @@
-import { act, useState } from "react";
+import { useState } from "react";
 import Navlink from "./Navlink";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -56,7 +56,7 @@ export default function Example() {
           ))}
         </PopoverGroup>
         {/* Right login section */}
-        <NavbarLogin />
+        <NavbarLogin userNavigation={userNavigation} />
       </nav>
       <Dialog
         open={mobileMenuOpen}
