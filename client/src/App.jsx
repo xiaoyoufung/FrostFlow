@@ -1,9 +1,9 @@
-import Page from "./components/Page";
+import Dashboard from "./components/Dashboard";
 
 const App = () => {
   return (
     <>
-      <Page title="Dashboard" description="Monitor every activity of your inventory" />
+      <Dashboard />
     </>
   );
 };
