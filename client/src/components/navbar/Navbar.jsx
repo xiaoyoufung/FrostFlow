@@ -12,6 +12,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import NavLogo from "./Navlogo";
 import NavbarUserProfile from "./NavbarUserProfile";
 import NavMobileMenu from "./NavMobileMenu";
+import NavMiddleLink from "./NavMiddleLink";
 
 const user = {
   name: "Tom Cook",
@@ -33,16 +34,12 @@ const userNavigation = [
   { name: "Sign out", href: "#" },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Example() {
   return (
     <>
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-white shadow">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="lg:mx-2 px-4 md:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <div className="shrink-0">
@@ -50,31 +47,26 @@ export default function Example() {
                 </div>
               </div>
               {/* middle section */}
-              <div className="hidden lg:flex h-full">
-                <div className="ml-10  space-x-4 h-full lg:flex">
-                  {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        aria-current={item.current ? "page" : undefined}
-                        className={`content-center px-1 pt-1 text-sm font-medium h-full ${item.current
-                          ? "text-grey"
-                          : "text-gray-500 hover:bg-white hover:text-black border-b-2"}`}
-                      >
-                        {item.name}
-                      </a>
-                  ))}
-                </div>
-              </div>
+              <NavMiddleSection />
+
               {/* right section */}
               <div className="hidden md:block">
                 <div className="ml-4 flex items-center md:ml-6">
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
                     <div>
-                      <MenuButton className="relative flex max-w-xs items-center rounded-full text-sm">
-                        <NavbarUserProfile {...user} />
-                        <ChevronDownIcon className="w-5 h-5" />
+                      <MenuButton className="relative flex max-w-xs items-center text-sm">
+                        <div className="md:flex lg:hidden">
+                          <img
+                            alt=""
+                            src={user.imageUrl}
+                            className="size-9 lg:size-8 rounded-full"
+                          />
+                        </div>
+                        <div className="lg:flex items-center md:hidden">
+                          <NavbarUserProfile {...user} />
+                          <ChevronDownIcon className="w-5 h-5" />
+                        </div>
                       </MenuButton>
                     </div>
                     <MenuItems
@@ -115,11 +107,9 @@ export default function Example() {
 
           <DisclosurePanel className="md:hidden">
             <div className="space-y-1 pb-3 pt-2 sm:px-3">
-
               {navigation.map((item) => (
                 <NavMobileMenu key={item.name} menu={item} />
               ))}
-
             </div>
             <div className="border-t border-gray-200 pt-4 pb-3">
               <NavbarUserProfile {...user} />
@@ -153,3 +143,15 @@ export default function Example() {
     </>
   );
 }
+
+const NavMiddleSection = () => {
+  return (
+    <div className="hidden md:flex h-full">
+      <div className="ml-10  space-x-8 h-full md:flex">
+        {navigation.map((item) => (
+          <NavMiddleLink key={item.name} item={item} />
+        ))}
+      </div>
+    </div>
+  );
+};
