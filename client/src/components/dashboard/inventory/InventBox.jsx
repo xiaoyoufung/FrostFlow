@@ -1,38 +1,50 @@
-import PropTypes from 'prop-types'
-import StorageStatus from '../../../model/StorageStatus'
+import PropTypes from "prop-types";
+import StorageStatus from "../../../model/StorageStatus";
+import greenStorageIcon from "../../../assets/images/inventory/green-xs-storage.svg";
+import redStorageIcon from "../../../assets/images/inventory/red-xs-storage.svg";
+import orangeStorageIcon from "../../../assets/images/inventory/orange-xs-storage.svg";
+import yellowStorageIcon from "../../../assets/images/inventory/yellow-xs-storage.svg";
+import greyStorageIcon from "../../../assets/images/inventory/grey-xs-storage.svg";
 
-const InventBox = ({status}) => {
-    let boxColor = '';
-    let boxImage = '';
-    switch (status) {
-        case StorageStatus.OUT_OF_STOCK:
-            boxColor = 'red';
-            break;
-        case StorageStatus.LOADING:
-            boxColor = 'orange';
-            break;
-        case StorageStatus.ERROR:
-            boxColor = 'yellow';
-            break;
-        case StorageStatus.LOADED:
-            boxColor = 'green';
-            break;
-        default:
-            boxColor = 'gray';
-            break;
-    }
-
-    boxImage = `/images/inventory/${boxColor}-xs-storage.svg`;
+const InventBox = ({ status }) => {
+  let storageIcon = "";
+  switch (status) {
+    case StorageStatus.OUT_OF_STOCK:
+      storageIcon = redStorageIcon;
+      break;
+    case StorageStatus.LOW_STOCK:
+      storageIcon = orangeStorageIcon;
+      break;
+    case StorageStatus.WELL_STOCK:
+      storageIcon = yellowStorageIcon;
+      break;
+    case StorageStatus.FULL_STOCK:
+      storageIcon = greenStorageIcon;
+      break;
+    case StorageStatus.TRANSPARENT:
+      storageIcon = (
+        <div className="bg-white w-[30px] h-[31px]">
+        </div>
+      );
+      break;
+    default:
+      storageIcon = greyStorageIcon;
+      break;
+  }
 
   return (
-    <div>
-        <img src={boxImage} alt="Inventory-Storage-Box" />
+    <div className="flex justify-center items-center w-full">
+      {status === StorageStatus.TRANSPARENT ? (
+        storageIcon
+      ) : (
+        <img src={storageIcon} alt="Inventory-Storage-Box" />
+      )}
     </div>
-  )
-}
+  );
+};
 
 InventBox.propTypes = {
-    status: PropTypes.instanceOf(StorageStatus).isRequired
-}
+  status: PropTypes.oneOf(Object.values(StorageStatus)).isRequired,
+};
 
-export default InventBox
+export default InventBox;
