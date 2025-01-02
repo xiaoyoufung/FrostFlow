@@ -75,6 +75,13 @@ const Header = () => {
             </div>
           </div>
 
+          <div className="relative">
+            <div className="relative h-16 bg-indigo-50 flex items-center">
+              <div className="absolute inset-y-0 left-0 w-1 bg-indigo-600"></div>
+              <span className="pl-6 text-xl font-medium text-indigo-600">Dashboard</span>
+            </div>
+          </div>
+
           <div className="mt-2 px-4">
             <div className="space-y-4">
               <a href="#" className="block text-base text-gray-600">Team</a>
