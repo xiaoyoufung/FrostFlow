@@ -23,7 +23,7 @@ const InventBox = ({ status }) => {
       break;
     case StorageStatus.TRANSPARENT:
       storageIcon = (
-        <div className="bg-white w-[30px] h-[31px]">
+        <div className="bg-transparent w-[30px] h-[31px]">
         </div>
       );
       break;
@@ -33,7 +33,7 @@ const InventBox = ({ status }) => {
   }
 
   return (
-    <div className="flex justify-center items-center w-full">
+    <div className="shrink-0">
       {status === StorageStatus.TRANSPARENT ? (
         storageIcon
       ) : (

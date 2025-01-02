@@ -11,7 +11,7 @@ const Page = ({ title, description, children }) => {
             <h1 className="text-3xl font-semibold text-gray-900 pt-10">
               {title}
             </h1>
-            <p className="text-slate-700 my-2">{description}</p>
+            <p className="text-slate-700 my-2 text-base">{description}</p>
             {children}
           </div>
         </main>

@@ -1,15 +1,20 @@
 import Page from "../components/Page";
-import TopContainer from "./dashboard/TopContainer";
+import InventSuggest from "./dashboard/inventory/InventSuggest";
+import RoomEnv from "./dashboard/roomEnv/RoomEnv";
 
 const Dashboard = () => {
+
+
   return (
     <Page
       title="Dashboard"
       description="Monitor every activity of your inventory"
     >
-      <TopContainer>
-        <h1>Dashboard</h1>
-      </TopContainer  >
+      <div className="flex flex-row justify-between">
+      <InventSuggest />
+      <RoomEnv />
+      </div>
+     
     </Page>
   );
 };
