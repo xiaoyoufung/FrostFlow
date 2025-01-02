@@ -6,11 +6,11 @@ const Page = ({ title, description, children }) => {
     <>
       <div className="min-h-full">
         <Navbar />
-
         <main>
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-
-            <h1 className="text-3xl font-semibold text-gray-900 pt-10">{title}</h1>
+            <h1 className="text-3xl font-semibold text-gray-900 pt-10">
+              {title}
+            </h1>
             <p className="text-slate-700 my-2">{description}</p>
             {children}
           </div>
