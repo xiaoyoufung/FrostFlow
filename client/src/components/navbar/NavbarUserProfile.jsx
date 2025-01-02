@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const NavbarUserProfile = ({imageUrl, name, email}) => {
   return (
-    <div className="flex items-center px-4">
+    <div className="flex items-center lg:pr-4 px-4">
       <div className="shrink-0">
         <img alt="" src={imageUrl} className="size-10 lg:size-8 rounded-full" />
       </div>
