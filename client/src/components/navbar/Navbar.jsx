@@ -135,15 +135,15 @@ export default function Example() {
               ))}
 
             </div>
-            <div className="border-t border-gray-200 pb-3 pt-4">
+            <div className="border-t border-gray-200 pt-4">
               <NavbarUserProfile {...user} />
-              <div className="mt-3 space-y-1 px-2">
+              <div className="mt-3 space-y-1">
                 {userNavigation.map((item) => (
                   <DisclosureButton
                     key={item.name}
                     as="a"
                     href={item.href}
-                    className="block rounded-md px-3 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-black"
+                    className="block rounded-md px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
                   >
                     {item.name}
                   </DisclosureButton>
