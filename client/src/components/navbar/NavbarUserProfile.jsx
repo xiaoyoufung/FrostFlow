@@ -4,11 +4,11 @@ const NavbarUserProfile = ({imageUrl, name, email}) => {
   return (
     <div className="flex items-center px-4">
       <div className="shrink-0">
-        <img alt="" src={imageUrl} className="size-8 rounded-full" />
+        <img alt="" src={imageUrl} className="size-10 lg:size-8 rounded-full" />
       </div>
-      <div className="ml-3 text-left">
-        <div className="text-sm/5 font-medium text-grey">{name}</div>
-        <div className="text-xs font-medium text-gray-400">{email}</div>
+      <div className="ml-3 text-left font-normal lg:font-medium">
+        <div className="lg:text-sm/5  text-grey">{name}</div>
+        <div className="text-sm lg:text-xs lg:text-gray-400 text-gray-500">{email}</div>
       </div>
     </div>
   );
