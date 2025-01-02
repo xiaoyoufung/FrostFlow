@@ -1,24 +1,22 @@
 import { DisclosureButton } from "@headlessui/react";
 import PropTypes from "prop-types";
 
-const NavMobileMenu = ({ navigation }) => {
+const NavMobileMenu = ({ menu }) => {
   return (
-    <div key={navigation.name} className="relative">
-      <div className="relative h-10 bg-indigo-50 flex items-center">
-        <div className="absolute inset-y-0 left-0 w-1 bg-indigo-600"></div>
+    <div key={menu.name} className="relative">
+      <div
+        className={`relative h-10 ${menu.current && "bg-indigo-50"} flex items-center`}
+      >
+        <div
+          className={`absolute inset-y-0 left-0 w-1 ${menu.current && "bg-indigo-600"}`}
+        ></div>
         <DisclosureButton
-          key={navigation.name}
+          key={menu.name}
           as="a"
-          href={navigation.href}
-          aria-current={navigation.current ? "page" : undefined}
-          className={`${
-            (navigation.current
-              ? "bg-gray-100 text-grey"
-              : "text-gray-500 hover:bg-gray-700 hover:text-white",
-            "block rounded-md px-3 py-2 text-base font-medium")
-          }`}
-        >
-          {navigation.name}
+          href={menu.href}
+          aria-current={menu.current ? "page" : undefined}
+          className={`block rounded-md px-5 py-2 text-base font-medium ${menu.current ? "text-indigo-600" : "text-gray-500 hover:bg-gray-700 hover:text-white"}`}>
+          {menu.name}
         </DisclosureButton>
       </div>
     </div>
@@ -26,7 +24,7 @@ const NavMobileMenu = ({ navigation }) => {
 };
 
 NavMobileMenu.propTypes = {
-  navigation: PropTypes.array.isRequired,
+  menu: PropTypes.array.isRequired,
 };
 
 export default NavMobileMenu;

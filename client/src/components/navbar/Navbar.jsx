@@ -128,10 +128,10 @@ export default function Example() {
           </div>
 
           <DisclosurePanel className="md:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+            <div className="space-y-1 pb-3 pt-2 sm:px-3">
 
               {navigation.map((item) => (
-                <NavMobileMenu key={item.name} navigation={item} />
+                <NavMobileMenu key={item.name} menu={item} />
               ))}
 
             </div>
