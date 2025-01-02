@@ -9,7 +9,7 @@ const NavMobileMenu = ({ menu }) => {
       href={menu.href}
       aria-current={menu.current ? "page" : undefined}
       className={`
-        block px-5 py-2 text-base font-medium border-l-4
+        block pr-4 pl-3 py-2 text-base font-medium border-l-4
         ${
           menu.current
             ? "text-indigo-600 bg-indigo-50  border-indigo-500"
