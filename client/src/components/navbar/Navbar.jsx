@@ -34,7 +34,7 @@ const userNavigation = [
   { name: "Sign out", href: "#" },
 ];
 
-export default function Example() {
+export default function Navbar() {
   return (
     <>
       <Disclosure as="nav" className="bg-white shadow">
