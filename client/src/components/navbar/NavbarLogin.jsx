@@ -1,26 +1,17 @@
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import NavbarUserProfile from "./NavbarUserProfile";
 
-const NavbarLogin = ({userNavigation}) => {
+const NavbarLogin = ({ userNavigation }) => {
   return (
     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
       <Menu as="div" className="relative ml-3">
         <div>
-          <MenuButton className="relative ">
+          <MenuButton className="relative flex items-center space-x-3">
             <span className="sr-only">Open user menu</span>
-            <div className="flex items-center space-x-4">
-              <div className="bg-gray-300 w-10 h-10 rounded-full"></div>
-
-              <div className="text-start">
-                <p className="font-semibold text-sm/6">Justin Laksana</p>
-                <p className="font-medium text-xs/6 text-gray-500">justtinlak07@gmail.com</p>
-              </div>
-
-              <div>
-                <ChevronDownIcon className="w-6 h-6" />
-              </div>
-            </div>
+            <NavbarUserProfile />
+            <ChevronDownIcon className="w-6 h-6" />
           </MenuButton>
         </div>
         <MenuItems
@@ -44,12 +35,12 @@ const NavbarLogin = ({userNavigation}) => {
 };
 
 NavbarLogin.propTypes = {
-    userNavigation: PropTypes.arrayOf(
-        PropTypes.shape({
-            name: PropTypes.string.isRequired,
-            href: PropTypes.string.isRequired,
-        })
-    ).isRequired,  
+  userNavigation: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      href: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default NavbarLogin;
