@@ -1,15 +1,7 @@
-import React from "react";
-import nearProduct from "../../data/nearProduct.json";
+import PropTypes from "prop-types";
 
-const Table = () => {
-  const tHead = [
-    { title: "Imported Date", className: "pl-6 pr-3" },
-    { title: "Product Name", className: "px-3" },
-    { title: "Customer Name", className: "px-3" },
-    { title: "Lot Number", className: "px-3" },
-    { title: "In Stock", className: "px-3" },
-    { title: "Expire Date", className: "pl-3 pr-6" },
-  ];
+const Table = ({tHead, data}) => {
+
   return (
     <div className="mx-4">
       <div className="rounded-lg ring-2 ring-black ring-opacity-5 shadow-md">
@@ -27,7 +19,7 @@ const Table = () => {
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {nearProduct.products.map((product, index) => (
+            {data.map((product, index) => (
               <tr key={index}>
                 <td className="py-3.5 pl-6 pr-3">{product.date}</td>
                 <td className="py-3.5 px-3">{product.product_name}</td>
@@ -48,6 +40,25 @@ const Table = () => {
       </div>
     </div>
   );
+};
+
+Table.propTypes = {
+  tHead: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      className: PropTypes.string
+    })
+  ).isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      date: PropTypes.string.isRequired,
+      product_name: PropTypes.string.isRequired,
+      customer_name: PropTypes.string.isRequired,
+      lot_no: PropTypes.string.isRequired,
+      quantity: PropTypes.number.isRequired,
+      expire_date: PropTypes.string.isRequired
+    })
+  ).isRequired,
 };
 
 export default Table;
