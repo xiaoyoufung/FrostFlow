@@ -6,13 +6,11 @@ import Status from "../../../utils/StorageStatus";
 const InventSuggest = () => {
   return (
     <TopContainer>
-      <div className="p-2 m-2 flex flex-col justify-center">
         <h1 className="font-semibold p-2 text-base">Inventory Suggestion</h1>
         <div className="flex flex-row items-end justify-center px-8">
           <InventContainer />
           <LabelGroup />
         </div>
-      </div>
     </TopContainer>
   );
 };
