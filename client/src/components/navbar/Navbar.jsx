@@ -70,7 +70,7 @@ export default function Navbar() {
         <DisclosurePanel className="md:hidden">
           <div className="space-y-1 pb-3 pt-2 sm:px-3">
             {navigation.map((item) => (
-              <NavMobileMenu key={item.name} menu={item} />
+              <NavMobileMenu key={item.name} nav={item} />
             ))}
           </div>
           <div className="border-t border-gray-200 pt-4 pb-3">
@@ -109,7 +109,7 @@ const NavMiddleSection = () => {
     <div className="hidden md:flex h-full">
       <div className="space-x-8 h-full md:flex">
         {navigation.map((item) => (
-          <NavMiddleLink key={item.name} item={item} />
+          <NavMiddleLink key={item.name} nav={item} />
         ))}
       </div>
     </div>

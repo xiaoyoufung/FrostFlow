@@ -1,29 +1,34 @@
 import { DisclosureButton } from "@headlessui/react";
 import PropTypes from "prop-types";
 
-const NavMobileMenu = ({ menu }) => {
+const NavMobileMenu = ({ nav }) => {
+  const { name, href, current } = nav;
   return (
     <DisclosureButton
-      key={menu.name}
+      key={name}
       as="a"
-      href={menu.href}
-      aria-current={menu.current ? "page" : undefined}
+      href={href}
+      aria-current={current ? "page" : undefined}
       className={`
         block pr-4 pl-3 py-2 text-base font-medium border-l-4
         ${
-          menu.current
+          current
             ? "text-indigo-600 bg-indigo-50  border-indigo-500"
             : "text-gray-600 border-transparent hover:bg-gray-50 hover:text-gray-800 hover:border-gray-300"
         }
             `}
     >
-      {menu.name}
+      {name}
     </DisclosureButton>
   );
 };
 
 NavMobileMenu.propTypes = {
-  menu: PropTypes.array.isRequired,
+  nav: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
+    current: PropTypes.bool.isRequired
+  }).isRequired
 };
 
 export default NavMobileMenu;
