@@ -1,7 +1,7 @@
 import InventContainer from "./InventContainer";
 import TopContainer from "../TopContainer";
 import LabelGroup from "./LabelGroup";
-import StatusLogic from "./StatusLogic";
+import status from "../../../data/status.json";
 
 const InventSuggest = () => {
   return (
@@ -9,7 +9,7 @@ const InventSuggest = () => {
         <h1 className="font-semibold p-2 text-base">Inventory Suggestion</h1>
         <div className="flex flex-row items-end justify-center px-8">
           <InventContainer />
-          <LabelGroup statusLists={StatusLogic()} />
+          <LabelGroup statusLists={status.data} />
         </div>
     </TopContainer>
   );

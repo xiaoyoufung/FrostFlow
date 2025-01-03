@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
-import Shape from '../../../utils/Shape';
+import Shape from '../utils/Shape';
 
-const StatusLabel = ({shape, color, text}) => {
+const ColorLabel = ({shape, color, text}) => {
   let roundedStyle = '';
   if(shape === Shape.CIRCLE){
     roundedStyle = 'rounded-full';
@@ -18,10 +18,10 @@ const StatusLabel = ({shape, color, text}) => {
   )
 }
 
-StatusLabel.propTypes = {
+ColorLabel.propTypes = {
   shape: PropTypes.oneOf(Object.values(Shape)).isRequired,
   color: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 }
 
-export default StatusLabel
+export default ColorLabel
