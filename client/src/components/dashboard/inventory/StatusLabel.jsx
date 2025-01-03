@@ -24,7 +24,7 @@ const StatusLabel = ({status, text}) => {
   return (
     <div className='flex flex-row items-center w-full space-x-1'>
         <div className={`${color} w-2 h-2 rounded-sm`}></div>
-        <p className='text-xs text-gray-700'>{text}</p>
+        <p className='text-xs text-gray-500'>{text}</p>
     </div>
   )
 }
