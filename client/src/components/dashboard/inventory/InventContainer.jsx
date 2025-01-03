@@ -25,7 +25,6 @@ const InventContainer = () => {
       {Invents.map((row, rowIndex) => (
         <div key={rowIndex} className="flex justify-between">
           {row.map((element) => {
-            console.log(element);
             return InventBox({ status: element });
           })}
         </div>
