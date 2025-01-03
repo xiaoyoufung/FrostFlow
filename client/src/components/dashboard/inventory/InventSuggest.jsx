@@ -1,7 +1,7 @@
 import InventContainer from "./InventContainer";
 import TopContainer from "../TopContainer";
 import StatusLabel from "./StatusLabel";
-import Status from "../../../model/StorageStatus";
+import Status from "../../../utils/StorageStatus";
 
 const InventSuggest = () => {
   return (
@@ -20,10 +20,10 @@ const InventSuggest = () => {
 const LabelGroup = () => {
   return (
     <div className="inline-flex flex-col justify-between space-y-3 pl-5 pb-4">
-      <StatusLabel color={Status.OUT_OF_STOCK} text="Out of Stock" />
-      <StatusLabel color={Status.LOW_STOCK} text="Low Stock" />
-      <StatusLabel color={Status.WELL_STOCK} text="Well Stock" />
-      <StatusLabel color={Status.FULL_STOCK} text="Full Stock" />
+      <StatusLabel status={Status.OUT_OF_STOCK} text="Out of Stock" />
+      <StatusLabel status={Status.LOW_STOCK} text="Low Stock" />
+      <StatusLabel status={Status.WELL_STOCK} text="Well Stock" />
+      <StatusLabel status={Status.FULL_STOCK} text="Full Stock" />
     </div>
   );
 };
