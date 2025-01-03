@@ -1,4 +1,4 @@
-import Status from '../../../model/StorageStatus'
+import Status from '../../../utils/StorageStatus'
 import InventBox from './InventBox'
 
 const InventContainer = () => {

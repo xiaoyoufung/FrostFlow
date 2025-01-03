@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import StorageStatus from "../../../model/StorageStatus";
+import StorageStatus from "../../../utils/StorageStatus";
 import greenStorageIcon from "../../../assets/images/inventory/green-xs-storage.svg";
 import redStorageIcon from "../../../assets/images/inventory/red-xs-storage.svg";
 import orangeStorageIcon from "../../../assets/images/inventory/orange-xs-storage.svg";
