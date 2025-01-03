@@ -1,0 +1,154 @@
+{
+    "products": [
+      {
+        "date": "2024-06-01",
+        "product_name": "Eggplant",
+        "product_code": "E5",
+        "quantity": "01/185",
+        "customer_name": "Theresa Webb",
+        "lot_no": "20240203-01",
+        "expire_status": "warning",
+        "expire_date": "2024-06-30"
+      },
+      {
+        "date": "2024-06-01",
+        "product_name": "Cabbage",
+        "product_code": "A1",
+        "quantity": "22/994",
+        "customer_name": "Theresa Webb",
+        "lot_no": "20240203-01",
+        "expire_status": "normal",
+        "expire_date": "2024-07-23"
+      },
+      {
+        "date": "2024-06-01",
+        "product_name": "Green Oak",
+        "product_code": "E2",
+        "quantity": "72/887",
+        "customer_name": "Theresa Webb",
+        "lot_no": "20240203-01",
+        "expire_status": "normal",
+        "expire_date": "2024-08-05"
+      },
+      {
+        "date": "2024-06-02",
+        "product_name": "Romaine Lettuce",
+        "product_code": "E3",
+        "quantity": "45/500",
+        "customer_name": "Robert Fox",
+        "lot_no": "20240203-02",
+        "expire_status": "warning",
+        "expire_date": "2024-06-25"
+      },
+      {
+        "date": "2024-06-02",
+        "product_name": "Cherry Tomatoes",
+        "product_code": "T1",
+        "quantity": "33/750",
+        "customer_name": "Jenny Wilson",
+        "lot_no": "20240203-03",
+        "expire_status": "critical",
+        "expire_date": "2024-06-15"
+      },
+      {
+        "date": "2024-06-03",
+        "product_name": "Bell Peppers",
+        "product_code": "P2",
+        "quantity": "58/420",
+        "customer_name": "Esther Howard",
+        "lot_no": "20240204-01",
+        "expire_status": "normal",
+        "expire_date": "2024-07-30"
+      },
+      {
+        "date": "2024-06-03",
+        "product_name": "Cucumber",
+        "product_code": "C1",
+        "quantity": "89/600",
+        "customer_name": "Brooklyn Adams",
+        "lot_no": "20240204-02",
+        "expire_status": "warning",
+        "expire_date": "2024-06-28"
+      },
+      {
+        "date": "2024-06-04",
+        "product_name": "Spinach",
+        "product_code": "S1",
+        "quantity": "12/300",
+        "customer_name": "Wade Warren",
+        "lot_no": "20240204-03",
+        "expire_status": "critical",
+        "expire_date": "2024-06-18"
+      },
+      {
+        "date": "2024-06-04",
+        "product_name": "Kale",
+        "product_code": "K1",
+        "quantity": "67/450",
+        "customer_name": "Cameron Smith",
+        "lot_no": "20240205-01",
+        "expire_status": "normal",
+        "expire_date": "2024-07-15"
+      },
+      {
+        "date": "2024-06-05",
+        "product_name": "Arugula",
+        "product_code": "A2",
+        "quantity": "34/280",
+        "customer_name": "Leslie Alexander",
+        "lot_no": "20240205-02",
+        "expire_status": "warning",
+        "expire_date": "2024-06-27"
+      },
+      {
+        "date": "2024-06-05",
+        "product_name": "Radish",
+        "product_code": "R1",
+        "quantity": "91/800",
+        "customer_name": "Dianne Russell",
+        "lot_no": "20240205-03",
+        "expire_status": "normal",
+        "expire_date": "2024-07-28"
+      },
+      {
+        "date": "2024-06-06",
+        "product_name": "Carrots",
+        "product_code": "C2",
+        "quantity": "78/650",
+        "customer_name": "Guy Hawkins",
+        "lot_no": "20240206-01",
+        "expire_status": "warning",
+        "expire_date": "2024-06-29"
+      },
+      {
+        "date": "2024-06-06",
+        "product_name": "Broccoli",
+        "product_code": "B1",
+        "quantity": "44/400",
+        "customer_name": "Ralph Edwards",
+        "lot_no": "20240206-02",
+        "expire_status": "critical",
+        "expire_date": "2024-06-16"
+      },
+      {
+        "date": "2024-06-07",
+        "product_name": "Cauliflower",
+        "product_code": "C3",
+        "quantity": "23/320",
+        "customer_name": "Cody Fisher",
+        "lot_no": "20240206-03",
+        "expire_status": "normal",
+        "expire_date": "2024-07-20"
+      },
+      {
+        "date": "2024-06-07",
+        "product_name": "Brussels Sprouts",
+        "product_code": "B2",
+        "quantity": "56/480",
+        "customer_name": "Eleanor Pena",
+        "lot_no": "20240207-01",
+        "expire_status": "warning",
+        "expire_date": "2024-06-26"
+      }
+    ]
+  }

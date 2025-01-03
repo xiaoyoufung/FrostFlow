@@ -21,7 +21,7 @@ const InventContainer = () => {
     ];
     
   return (
-    <div className='bg-white w-[500px] p-6'>
+    <div className='bg-white w-[500px] p-6 rounded-lg shadow-sm'>
       {Invents.map((row, rowIndex) => (
         <div key={rowIndex} className="flex justify-between">
           {row.map((element) => {
